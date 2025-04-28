@@ -37,8 +37,11 @@ javascript: (function () {
 javascript: (function () {
   let html = document.querySelector("body");
   let window = document.createElement("div");
+  let hhhh = document.querySelector(".hhhhh") || false;
+  hhhh ? hhhh.parentElement.remove() : null;
   window.innerHTML = `
   <div
+  class="hhhhh"
   style="display: flex; justify-content: space-between; padding: 10px; align-items: center; font-size: 1em; background-color: rgba(255, 255, 255, 0.6); height: 100%; width: calc(100% - 20px); border-radius: 15px; border: 2px rgba(0, 0, 0, 0.1) solid; flex-direction: column;"
   >
     <div class="topBar"
