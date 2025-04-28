@@ -35,26 +35,37 @@ javascript: (function () {
 })();
 
 javascript: (function () {
-  let html = document.querySelector('body');
-  let window = document.createElement('div');
-  window.innerHTML = 'Hello Peeps!';
-  window.style.position='fixed';
-  window.style.left='calc(50vw - 25em)';
-  window.style.top='calc(1vh + 5em)';
-  window.style.width='50em';
-  window.style.height='25em';
-  window.style.backgroundColor='rgba(248, 249, 250, 0.3)';
-  window.style.backdropFilter='blur(50px)';
-  window.style.borderRadius='30px';
-  window.style.boxShadow='0 0 10px 0px rgba(0, 0, 0, 0.5)';
-  window.style.zIndex='99999';
-  window.style.border='1px solid rgba(0, 0, 0, 0.5)';
-  window.style.display='flex';
-  window.style.justifyContent='center';
-  window.style.alignItems='center';
+  let html = document.querySelector("body");
+  let window = document.createElement("div");
+  window.innerHTML = `
+  <div class="topBar"
+  style="display: flex; justify-content: end; width: 100%;"
+  >
+    <button
+    style="background-color: rgba(0,0,0,0.5); border: none; padding: 10px; border-radius: 50%; width: 3em; height: 3em; color: white; display: flex; justify-content: center; align-items: center;"
+    onClick="this.parentElement.remove()">
+      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path fill="currentColor" d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z"/>
+      </svg>
+    </button>
+  </div>
+  <div>hello</div>
+  `;
+  window.style.position = "fixed";
+  window.style.left = "calc(50vw - 25em)";
+  window.style.top = "calc(1vh + 5em)";
+  window.style.width = "50em";
+  window.style.height = "25em";
+  window.style.backgroundColor = "rgba(248, 249, 250, 0.3)";
+  window.style.backdropFilter = "blur(50px)";
+  window.style.borderRadius = "30px";
+  window.style.boxShadow = "0 0 10px 0px rgba(0, 0, 0, 0.5)";
+  window.style.zIndex = "99999";
+  window.style.border = "1px solid rgba(0, 0, 0, 0.5)";
+  window.style.display = "flex";
+  window.style.flexDirection = "column";
+  window.style.justifyContent = "space-between";
+  window.style.alignItems = "center";
+  window.style.padding = "30px";
   html.appendChild(window);
 })();
-
-
-
-
