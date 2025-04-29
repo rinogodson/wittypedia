@@ -2,6 +2,11 @@ javascript: (async function () {
   let html = document.querySelector("body");
   let head = document.head;
   let window = document.createElement("div");
+  const d = document.querySelector(".mw-page-title-main");
+    if (!d) {
+      alert("not wikipedia page");
+      return;
+    }
   window.showWindow = async () => {
     window.classList.add("wittywindow");
     let hhhh = document.querySelector(".hhhhh") || false;
@@ -69,11 +74,6 @@ javascript: (async function () {
     window.style.padding = "15px";
     window.style.gap = "10px";
     html.appendChild(window);
-
-    const d = document.querySelector(".mw-page-title-main");
-    if (!d) {
-      alert("not wikipedia page");
-    }
 
     let topic = d.textContent;
     let joke = "";
